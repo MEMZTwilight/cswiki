@@ -1,0 +1,133 @@
+﻿<html">
+<head>
+<meta charset="utf-8">
+<title>网站维护</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+<meta name="keywords" content="残月发布页,维护中">
+<meta name="description" content="残月个人发页,维护中">
+<style>
+#rin-main {
+    width: 600px;
+    margin: auto;
+    text-align: center;
+    margin-top: calc(50vh - 200px);
+}
+@media (max-width: 600px){
+    #rin-main {
+        width: 95%;
+    }
+}
+#rin-headimg{
+    height: 90px;
+}
+
+.rin-name{
+    margin-top: 20px;
+    color:white;
+    font-size: 30px;
+    font-weight: 700;
+    text-shadow: 0 0 8px rgba(255,255,255,.55);
+	user-select: none;
+}
+.rin-description{
+    color:white;
+    text-shadow: 0 0 8px rgba(255,255,255,.55);
+    font-size: 25px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    letter-spacing:8px;
+	user-select: none;
+}
+.rin-btn {
+    color:white;
+    margin-top: 20px;
+}
+body {
+    margin: 0;
+    background: #2e2e2c;
+}
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+::selection {
+    color: #e0e0e0;
+    background: rgba(255,64,129,.35);
+}
+#rin-bg{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+    position: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    background-color: #818181;
+    background-image: url('img/bg.jpg');
+}
+#rin-bg:after {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    z-index: -1;
+    position: fixed;
+    background-color: rgba(66,66,66,.6);
+}
+
+#rin-footer {
+    bottom: 0;
+    margin: auto;
+    width: 100vw;
+    position: absolute;
+    padding: 10px 0 10px 0;
+}
+#rin-footer div {
+    font-size: 15px;
+    text-align: center;
+    color: rgba(255,255,255,.79);
+	user-select: none;
+	letter-spacing: .05em;
+}
+#rin-footer div a {
+    color: #2196f3;
+    font-weight: 700;
+    transition: all .3s;
+    text-decoration: none;
+}
+.rin-tr {
+    width: 100%;
+    height: 2.5px;
+    margin: auto;
+    background: rgba(255,255,255,.3);
+}
+
+
+</style>
+</head>
+<body>
+<div id="rin-bg"></div>
+<main id="rin-main">
+    <div class="rin-name">4 &nbsp;&nbsp; 0 &nbsp;&nbsp; 4</div>
+    <div class="rin-description">「此站点正在维护中」</div>
+    <div class="rin-tr"></div>
+    <br>
+    <a class="mdui-btn mdui-btn-raised rin-btn mdui-text-capitalize">出现此页面则网站已启用维护或被暂停</a><br>
+    <br>
+	<a class="mdui-btn mdui-btn-raised rin-btn mdui-text-capitalize">请等待维护结束后再次访问</a>
+</main>
+<footer id="rin-footer">
+<div>本网站均来收集于互联网，请勿用于任何商业用途，仅供学习交流
+<br>
+<a href="http://127.0.0.1:8080/" id="bg-link" target="_blank">http://127.0.0.1:8080/</a>
+<br>
+<a href="http://127.0.0.1:8080/">Copyright © 2023 All Rights Reserved</a>
+</p></p>
+<br>&nbsp;
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>CS2 新手 wiki</title>
+    <meta name="keywords" content="CS2 新手 wiki">
+    <meta name="description" content="CS2 新手 wiki 教程，是一个成立于 2025/1/13 的新 wiki">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="baidu-site-verification" content="codeva-5FW7H8Cio3" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width,shrink-to-fit=no">
+    <link href="assets/style2.css?v=20250118" rel="stylesheet">
+    <link href="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-y/font-awesome/6.0.0/css/all.min.css" type="text/css" rel="stylesheet" />
+    <link href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/Swiper/8.0.6/swiper-bundle.min.css" type="text/css" rel="stylesheet" />
+    <link href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/animate.css/4.1.1/animate.min.css" type="text/css" rel="stylesheet" />
+    <script defer src="https://collect.17a.ink/script.js" data-website-id="37b9e933-6f7f-4659-ae36-cfc4dbcb99f3"></script>
+    <style>
+       .footer-only {
+            display: none;
+        }
+        /* 定义滑入动画 */
+        @keyframes slideIn {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+       .slide-in {
+            animation: slideIn 0.5s ease-out forwards;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navigation menu animate__slideInDown animate__animated">
+        <ul id="menu">
+            <li><text class="siteName">CS2 WIKI</text></li>
+            <li data-menuanchor="home"><a href="#home">首页</a></li>
+            <li data-menuanchor="introduce"><a href="#introduce">介绍</a></li>
+            <li data-menuanchor="why"><a href="#special">为什么要用大厨 cs wiki</a></li>
+            <li data-menuanchor="info"><a href="#info">关于</a></li>
+        </ul>
+        <div>
+            <a class="right btn" href="wiki.html">查看 WIKI</a>
+        </div>
+    </nav>
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide section home page-1">
+                <div class="left-text">
+                    <h2 class="maintext animate__fadeInUp animate__animated" data-wow-duration="0.5s" data-wow-delay="0s">CS2wiki</h2>
+                    <h3 class="middletext animate__fadeInUp animate__animated" data-wow-duration="1s" data-wow-delay="0s">免费，所有人都可查看</h3>
+                    <div class="actions animate__fadeInUp animate__animated" data-wow-duration="1s" data-wow-delay="0s">
+                        <a href="wiki.html" class="btn">开始查看所有 wiki</a>
+                    </div>
+                </div>
+                <a class="float-down" href="#introduce"><i class="fa-sharp fa-solid fa-angle-down"></i></a>
+            </div>
+            <div class="swiper-slide section page-2">
+                <div class="right-text ">
+                    <div class="middletext q">什么是 CS2wiki?</div>
+                    <div class="text">CS2 的部分教程，比如丢 X 箱烟等基本操纵<br>目前wiki属于半成品</div>
+                </div>
+            </div>
+            <div class="swiper-slide section page-3" data-anchor="special">
+                <div class="left-text">
+                    <div class="middletext">D1ck</div>
+                    <div class="card-container">
+                        <div class="card">
+                            <h2>内容多</h2>
+                            <p>支持直播教程，可以发送任意不懂得的地方</p>
+                        </div>
+                        <div class="card">
+                            <h2>EZ 使用</h2>
+                            <p>更简洁的 wikiUI 方便任何人使用 残疾人看完都会打了</p>
+                        </div>
+                        <div class="card">
+                            <h2>跳转快</h2>
+                            <p>cloudflare 网页托管，我管你哪的跳转快就得了</p>
+                        </div>
+                        <div class="card">
+                            <h2>简洁美观</h2>
+                            <p>全篇就那么点按钮，残疾人都会点</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide section info page-4" data-anchor="info">
+                <canvas id="canvas"></canvas>
+                <div class="left-text">
+                    <div class="middletext">此 wiki 由大厨 Esports 运营</div>
+                    <div class="text">300 天的 wiki 陪伴您 <a href="/privacy"></a></div>
+                    <div class="text" id="status"></div>
+                </div>
+            </div>
+            <div class="swiper-slide footer-only">
+                <footer id="footer">
+                    <div>
+                        <div class="footer">
+                            <div class="footer-content">
+                                <div class="footer-logo">
+                                    <div style="display: flex;align-items: center;"> <a href="" target="_blank"><img width="330" height="70" src="bg.jpg" lazy alt="" class="logo-bigger" /></a> </div>
+                                    <div></div>
+                                </div>
+                                <div>
+                                    <div class="m-footer-link">
+                                        <div class="m-footer-protocol">
+                                            <div style="text-align: center;"> <a href="/privacy" class="protocol"></a></div>
+                                        </div>
+                                        <div class="footer-tip"></div>
+                                        <div class="copyright"> &copy; CS2 WIKI 保留一切权利 · 
+                                            <span id="span_dt_dt"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <div id="loading" class="loading">
+        <div class="loading-content">
+            <svg t="1677684019299" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4354" width="200" height="200">
+                <path d="M512 96a416 416 0 0 0 0 832v-104A312 312 0 1 1 824 512H928A416 416 0 0 0 512 96z" fill="#ffffff" fill-opacity=".9" p-id="4355"></path>
+            </svg>
+            <p>LOADING...</p>
+        </div>
+    </div>
+    <script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.6.0/jquery.min.js"></script>
+    <script src="assets/main2.js?v=20250118"></script>
+    <script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/Swiper/8.0.6/swiper-bundle.min.js" type="application/javascript"></script>
+    <script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/wow/1.1.2/wow.js"></script>
+    <script>
+        // 修改链接点击事件处理函数
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href="wiki.html"]');
+            links.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault(); // 阻止默认的跳转行为
+                    const body = document.body;
+                    body.classList.add('slide-in'); // 添加 slide-in 类触发滑入动画
+                    setTimeout(() => {
+                        window.location.href = link.getAttribute('href'); // 延迟后跳转
+                    }, 500); // 延迟 0.5 秒，与动画时间一致
+                });
+            });
+        });
+        function show_date_time() {
+            const BirthDay = new Date("7/16/2021 00:00:00");
+            const today = new Date();
+            const timeold = (today.getTime() - BirthDay.getTime());
+            const sectimeold = timeold / 1000;
+            const secondsold = Math.floor(sectimeold);
+            const msPerDay = 24 * 60 * 60 * 1000;
+            const e_daysold = timeold / msPerDay;
+            const daysold = Math.floor(e_daysold);
+            const e_hrsold = (e_daysold - daysold) * 24;
+            const hrsold = Math.floor(e_hrsold);
+            const e_minsold = (e_hrsold - hrsold) * 60;
+            const minsold = Math.floor((e_hrsold - hrsold) * 60);
+            const seconds = Math.floor((e_minsold - minsold) * 60);
+            const span_dt_dt = document.getElementById('span_dt_dt');
+            span_dt_dt.innerHTML = '<font style="color:#F4F8F4">' + daysold + ' 天 </font>';
+        }
+        show_date_time();
+        $(function () {
+            setTimeout(function () {
+                document.getElementById('loading').remove();
+            }, 1000);
+        });
+    </script>
+    <script src="assets/hx.js"></script>
+</body>
+</html>

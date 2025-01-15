@@ -1,0 +1,1085 @@
+/*
+Copyright 2025 Yunmoan # ZGIT.
+未使用第三方 UI 组件库.
+仅供 OpenFrp 使用.
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: NovecentoWide;
+    src: url('NovecentoWideNormal.ttf');
+}
+
+@font-face {
+    font-family: NovecentoWideBold;
+    src: url('NovecentoWideBold.ttf');
+}
+
+/*加载动画*/
+@-webkit-keyframes changeright {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    50% {
+        -webkit-transform: rotate(180deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 30px 0;
+    background: #000;
+    color: #999;
+    font-size: 14px;
+    padding-bottom: 20px;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+}
+
+.footer .copyright {
+    display: inline-block
+}
+
+.footer p {
+    margin: 0;
+    padding: 0;
+    font-size: 14px !important;
+    line-height: 1.5
+}
+
+.footer a,
+.footer a:link,
+.footer a:visited,
+.footer a:active {
+    color: #999;
+    text-decoration: none;
+    font-size: 14px
+}
+
+.footer .logo-bigger {
+    width: 200px;
+    height: inherit !important
+}
+
+.footer a:hover {
+    color: #ccc;
+    text-decoration: underline
+}
+
+.footer .footer-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 1280px;
+    margin: 0 auto
+}
+
+.footer .footer-info {
+    color: #aaa;
+    margin-left: 60px;
+    line-height: 24px
+}
+
+.footer .footer-info .footer-advice p {
+    padding: 0
+}
+
+.footer .footer-info .footer-filing-tip {
+    padding: 0
+}
+
+.footer .footer-info .footer-tip {
+    padding: 0
+}
+
+.footer .footer-info .inline-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+/* 添加全屏滚动相关样式 */
+
+
+.section {
+    height: 100vh;
+    scroll-snap-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 为每个 section 添加入动画 */
+
+/* 为不同类型的动画添加不同的延迟 */
+
+/* 优化移动端动画效果 */
+@media (max-width: 768px) {
+    .section {
+        transition: all 1.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+}
+
+.text a {
+    color: #000000
+}
+
+.text a:hover {
+    color: #646464
+}
+
+.footer .footer-info a.protocol {
+    color: #fff
+}
+
+.footer .footer-info .split-line {
+    margin-left: 10px;
+    margin-right: 10px
+}
+
+.footer .footer-info .footer-protocol {
+    color: #fff;
+    margin-bottom: 28px
+}
+
+.footer .footer-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.footer .footer-link a {
+    margin: 0 8px 0 5px
+}
+
+.footer .footer-link a:first-child {
+    margin-left: 0
+}
+
+.footer .footer-advice p {
+    padding: 5px 0
+}
+
+.footer .footer-logo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-height: 94px;
+    min-width: 300px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.footer .footer-logo img:first-child {
+    height: 42px
+}
+
+.footer .footer-filing-tip {
+    padding: 5px 0
+}
+
+.footer .footer-tip {
+    padding: 5px 0
+}
+
+.section {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.loading {
+    position: absolute;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.411) 95%);
+    height: 100%;
+    width: 100%;
+    z-index: 99999;
+
+}
+
+.loading-content svg {
+    -webkit-animation: changeright 1.5s linear infinite;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    line-height: 50px;
+}
+
+.loading-content p {
+    font-family: NovecentoWide;
+    color: white;
+    font-size: 20px;
+    position: fixed;
+    bottom: 15px;
+    left: 80px;
+    line-height: 50px;
+}
+
+
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.35) 20%, rgba(0, 0, 0, 0.001));
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 50px;
+}
+
+.menu a,
+.menu a:link,
+.menu a:visited,
+.menu a:active {
+    font-family: "Microsoft YaHei", "微软雅黑";
+    color: #e2e2e2;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.menu a:hover {
+    color: #f5f5f5;
+}
+
+.menu li {
+    margin: 0 20px;
+
+}
+
+.navigation {
+    padding: 0 16px;
+    height: calc(3.6rem - 1px);
+    user-select: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation .siteName {
+    letter-spacing: 3px;
+    font-family: NovecentoWideBold;
+    white-space: nowrap;
+    margin: 5px;
+    text-align: left;
+    color: #fff;
+    flex: 1;
+}
+
+.navigation .btn {
+    margin-right: 40px;
+    font-size: 14px !important;
+    padding: 8px 15px;
+    border: 1px solid #54acff;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #5191cc !important;
+    transition: all .3s;
+
+}
+
+.navigation .btn:hover {
+    background-color: #3883ca;
+    color: #ffffff !important;
+}
+
+.page-1 {
+    background: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("background1.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@-webkit-keyframes float {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    50% {
+        transform: translate(0px, -10px);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+.page-1 .float-down {
+    animation: 3s ease-in-out 0s infinite alternate float;
+    animation-direction: alternate-reverse;
+    position: absolute;
+    font-size: 40px;
+    right: calc(50% - 20px);
+    bottom: 5%;
+    color: rgba(255, 255, 255, .5);
+    transition: all .3s;
+}
+
+.page-1 .left-text {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80%;
+    z-index: 1;
+}
+
+.page-1 .left-text .middletext {
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 40px;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.page-1 .left-text .btn {
+    border: 2px solid #fff;
+    color: #fff;
+    margin-right: 30px;
+    font-size: 15px !important;
+    padding: 16px 35px;
+    border-radius: 35px;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.page-1 .left-text .btn:hover {
+    background-color: #fff;
+    color: #000 !important;
+}
+
+.page-1 .left-text .maintext {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 60px;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.page-2 {
+    background: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("background3.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.page-2 .right-text {
+    position: absolute;
+    right: -15%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    z-index: 1;
+}
+
+.page-2 .right-text .text {
+    font-size: 15px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    line-height: 1.6;
+}
+
+.page-2 .right-text .middletext {
+    font-size: 25px;
+    margin-top: 0;
+    margin-bottom: 40px;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h2,
+h3 {
+    font-weight: 500;
+    letter-spacing: .3rem;
+    text-transform: uppercase;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.page-3 {
+    background: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("background2.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.page-3 .left-text {
+
+    position: absolute;
+    top: 20%;
+    left: 10%;
+
+}
+
+.page-3 .left-text .middletext {
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.page-3 {
+    background: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("background2.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.page-4 .left-text {
+    overflow: hidden;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+
+}
+
+.page-4 .left-text .text {
+    font-size: 15px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: #000000;
+}
+
+.page-4 .left-text .middletext {
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 40px;
+    color: #000000;
+}
+
+canvas {
+    background-color: #eee;
+    display: block;
+    margin: 0 auto;
+}
+
+.card-container {
+    margin-top: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    justify-content: center !important;
+    align-items: center !important;
+
+}
+
+.card {
+    width: 20%;
+    margin-bottom: 30px;
+    background-color: #fff;
+    float: left;
+    width: 270px;
+    height: 300px;
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    left: 10px;
+    margin: 0 10px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    border-radius: 10px;
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+    font-size: 25px;
+    margin: 20px 20px;
+    color: #ffffff91;
+}
+
+.card p {
+    letter-spacing: 2px;
+    font-size: 16px;
+    margin: 0 23px;
+    color: #aaaaaa9c;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.footer .m-copyright {
+    display: none;
+}
+
+.footer .m-icp {
+    display: none;
+}
+
+.footer .m-footer-link {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .card-container {
+        width: 100vh;
+        overflow-x: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 100%;
+        margin-right: 20px;
+        margin: 30px;
+        background-color: #fff;
+        float: left;
+        width: 230px;
+        height: 300px;
+        background-color: rgba(0, 0, 0, .5);
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .card h2 {
+        font-size: 25px;
+        margin: 20px 20px;
+        color: #ffffff91;
+    }
+
+    .card p {
+        letter-spacing: 2px;
+        font-size: 16px;
+        margin: 0 23px;
+        color: #aaaaaa9c;
+        line-height: 1.6;
+        text-align: justify;
+    }
+
+    .card:last-child {
+        margin-right: 0;
+    }
+
+    .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.35) 20%, rgba(0, 0, 0, 0.001));
+        z-index: 100;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        height: 30px;
+    }
+
+    .menu a,
+    .menu a:link,
+    .menu a:visited,
+    .menu a:active {
+        font-family: "Microsoft YaHei", "微软雅黑";
+        color: #e2e2e2;
+        text-decoration: none;
+        font-size: 10px;
+    }
+
+    .menu a:hover {
+        color: #f5f5f5;
+    }
+
+    .menu li {
+        margin: 0 5px;
+
+    }
+
+    .navigation {
+        padding: 0 3px;
+        height: calc(3.6rem - 1px);
+        user-select: none;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navigation .siteName {
+        letter-spacing: 1px;
+        font-family: NovecentoWideBold;
+        white-space: nowrap;
+        text-align: left;
+        color: #fff;
+        flex: 1;
+    }
+
+    .navigation .btn {
+        margin-right: 9px;
+        font-size: 10px !important;
+        padding: 5px 10px;
+        border: 1px solid #54acff;
+        border-radius: 5px;
+        text-decoration: none;
+        color: #5191cc !important;
+        transition: all .3s;
+
+    }
+
+    .navigation .btn:hover {
+        background-color: #3883ca;
+        color: #ffffff !important;
+    }
+
+    .page-1 .float-down {
+        animation: 3s ease-in-out 0s infinite alternate float;
+        animation-direction: alternate-reverse;
+        position: absolute;
+        font-size: 30px;
+        right: calc(50% - 20px);
+        bottom: 10%;
+        color: rgba(255, 255, 255, .5);
+        transition: all .5s;
+    }
+
+    .page-1 .left-text {
+
+        position: absolute;
+        top: 50%;
+        left: 10%;
+
+    }
+
+    .page-1 .left-text .middletext {
+        font-size: 16px;
+        margin-top: 0;
+        margin-bottom: 40px;
+        color: #fff;
+    }
+
+    .page-1 .left-text .btn {
+        border: 2px solid #fff;
+        color: #fff;
+        margin-right: 30px;
+        font-size: 15px !important;
+        padding: 10px 20px;
+        border-radius: 35px;
+        text-decoration: none;
+        transition: all .3s;
+    }
+
+    .page-1 .left-text .btn:hover {
+        background-color: #fff;
+        color: #000 !important;
+    }
+
+    .page-1 .left-text .maintext {
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-size: 25px;
+        color: #ffffff
+    }
+
+    .page-2 {
+        background: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("background3.webp");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .page-2 .right-text {
+
+        position: absolute;
+        top: 30%;
+        right: 10%;
+
+    }
+
+    .page-2 .right-text .text {
+        font-size: 15px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        color: #fff;
+    }
+
+    .page-2 .right-text .middletext {
+        font-size: 25px;
+        margin-top: 0;
+        margin-bottom: 40px;
+        color: #fff;
+    }
+
+    .page-3 {
+        background: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("background2.webp");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+
+    .page-3 .left-text {
+
+        position: absolute;
+        top: 20%;
+        left: 3%;
+
+    }
+
+    .page-3 .left-text .middletext {
+        font-size: 20px;
+        margin-top: 0;
+        margin-bottom: 40px;
+        color: #fff;
+    }
+
+    .page-3 {
+        background: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("background2.webp");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+
+    .page-4 .left-text {
+
+        position: absolute;
+        top: 20%;
+        left: 10%;
+
+    }
+
+    .page-4 .left-text {
+
+        position: absolute;
+        top: 20%;
+        left: 10%;
+
+    }
+
+    .page-4 .left-text .text {
+        font-size: 13px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        color: #000000;
+    }
+
+    .page-4 .left-text .middletext {
+        font-size: 26px;
+        margin-top: 0;
+        margin-bottom: 40px;
+        color: #000000;
+    }
+
+    .footer .footer-content {
+        width: 100%;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .footer .m-copyright {
+        display: block;
+        text-align: center;
+    }
+
+    .footer .m-icp {
+        font-size: 20px !important;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: block;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer .footer-info {
+        display: none;
+    }
+
+    .footer .m-footer-link {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: block;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between
+    }
+
+    .footer .m-footer-link a {
+        margin: 0 8px 0 5px;
+        text-align: center;
+    }
+
+    .footer .m-footer-link a:first-child {
+        text-align: center;
+    }
+
+    .footer .m-footer-link a.protocol {
+        color: #fff
+    }
+}
+
+/* 添加 Swiper 基础样式 */
+.swiper {
+    width: 100%;
+    height: 100vh;
+}
+
+.swiper-slide {
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+/* 确保页面内容正确定位 */
+.page-1,
+.page-2,
+.page-3,
+.page-4 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* 修复内容溢出问题 */
+.swiper-slide {
+    overflow: hidden;
+}
+
+/* 确保背景图片正确显示 */
+.page-1,
+.page-2,
+.page-3,
+.page-4 {
+    background-position: center;
+    background-size: cover;
+}
+
+/* 修复移动端适配 */
+@media only screen and (max-width: 768px) {
+    .swiper-slide {
+        overflow-y: auto;
+    }
+
+    .card-container {
+        padding: 20px;
+        overflow-x: hidden;
+    }
+}
+
+/* 修改 footer slide 样式 */
+.footer-only {
+    min-height: auto !important;
+    height: auto !important;
+}
+
+.footer-only .footer {
+    position: relative;
+    bottom: auto;
+    padding: 30px 0;
+    background: #000;
+    width: 100%;
+}
+
+/* 确保其他全屏页面正常显示 */
+.swiper-slide:not(.footer-only) {
+    height: 100vh;
+}
+
+/* 移动端适配 */
+@media only screen and (max-width: 768px) {
+
+    /* 导航栏优化 */
+    .navigation {
+        padding: 0 10px;
+        height: 50px;
+    }
+
+    .navigation .siteName {
+        letter-spacing: 1px;
+        font-size: 16px;
+    }
+
+    .navigation .btn {
+        margin-right: 30px;
+        font-size: 12px !important;
+        padding: 6px 12px;
+    }
+
+    .menu li {
+        margin: 0 8px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+    /* 卡片容器优化 */
+    .card-container {
+        margin-top: 5px;
+        height: 80% !important;
+        padding: 0px;
+        gap: 0px;
+        width: 90%;
+        overflow-x: hidden;
+    }
+
+    .card {
+        width: calc(100% - 30px);
+        height: auto;
+        max-height: 5%;
+        margin: 5px;
+        padding: 12px;
+    }
+
+    .card h2 {
+        font-size: 23px;
+        margin: 5px;
+    }
+
+    .card p {
+        font-size: 14px;
+        margin: 5px;
+        letter-spacing: 1px;
+    }
+
+    .page-3 .left-text {
+        position: relative;
+        top: 55%;
+        left: 20px;
+        right: 0;
+        transform: translateY(-50%);
+        width: 90%;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* 页面内容优化 */
+    .page-1 .left-text,
+    .page-2 .right-text {
+        position: relative;
+        top: 10%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        width: 90%;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .page-4 .left-text {
+        overflow: hidden;
+        position: absolute;
+        top: 40%;
+        left: 10%;
+    }
+
+    .page-1 .left-text .maintext {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .page-1 .left-text .middletext {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .page-1 .left-text .btn {
+        padding: 12px 25px;
+        font-size: 14px !important;
+    }
+
+    /* Footer 优化 */
+    .footer {
+        padding: 20px 0;
+    }
+
+    .footer .footer-content {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .footer .m-footer-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer .m-copyright,
+    .footer .m-icp {
+        font-size: 12px !important;
+        margin: 10px 0;
+    }
+
+    .footer .footer-logo img {
+        width: 200px;
+        height: auto;
+    }
+
+    /* 滑动优化 */
+    .swiper-slide {
+        height: 100vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .swiper-slide:not(.footer-only) {
+        height: 100vh;
+        overflow: hidden;
+    }
+}
